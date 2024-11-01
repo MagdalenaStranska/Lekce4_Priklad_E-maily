@@ -19,3 +19,26 @@
 // };
 // 7.Pro kontrolu vypište tento objekt do stránky. Každou hodnotu vypište jako odstavec.
 
+const email = prompt("Zadej svůj e-mail:");
+const atIndex = email.indexOf("@");
+const parsedEmail = {
+    userName: email.slice(0, atIndex),
+    domain: email.slice(atIndex + 1, email.length),   
+};
+
+document.body.innerHTML += 
+"<p>Uživatelské jméno: " + parsedEmail.userName + "</p>";
+
+document.body.innerHTML += "<p>Doména: " + parsedEmail.domain + "</p>";
+
+
+// Reseni dle lektora:
+// const email = prompt('Zadejte e-mail:');
+// const atIndex = email.indexOf('@');
+// const parsedEmail = {
+//   userName: email.slice(0, atIndex),
+//   domain: email.slice(atIndex + 1),
+// };
+// document.body.innerHTML =
+//   '<p>Uživatelské jméno: ' + parsedEmail.userName + '</p>';
+// document.body.innerHTML += '<p>Doména: ' + parsedEmail.domain + '</p>';
